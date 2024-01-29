@@ -70,6 +70,10 @@ body {
     gap: 1.2rem;
 }
 
+.grid-flow[data-spacing="small"] {
+    gap: 0.5rem;
+}
+
 .profile-info img {
     border-radius: 100vw;
     margin: auto;
@@ -94,6 +98,10 @@ body {
 .location {
     color: var(--clr-primary-400);
     font-weight: var(--fw-bold);
+}
+
+.quote {
+    margin: 1rem 0;
 }
 
 button {
