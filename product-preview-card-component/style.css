@@ -1,0 +1,156 @@
+:root {
+
+    --clr-primary-dark-cyan: hsl(158, 36%, 37%);
+    --clr-primary-cream: hsl(30, 38%, 92%);
+
+    --clr-neutral-very-dark-blue: hsl(212, 21%, 14%);
+    --clr-neutral-dark-grayish-blue: hsl(228, 12%, 48%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+
+    --fw-bold: 500;
+    --fw-black: 700;
+
+    --fs-900: 5rem;
+    --fs-800: 3.5rem;
+    --fs-750: 2rem;
+    --fs-700: 1.5rem;
+    --fs-600: 1rem;
+    --fs-500: 1rem;
+    --fs-400: 0.9375rem;
+    --fs-300: 1rem;
+    --fs-200: 0.875rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+* {
+    font: inherit;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Fraunces', serif;
+}
+
+.desktop-image {
+    display: none;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mobile-image {
+    width: 100%;
+    min-height: 250px;
+}
+
+@media (min-width: 50rem) {
+    .mobile-image {
+        display: none;
+    }
+
+    .desktop-image {
+        display: block;
+    }
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    font-size: var(--fs-200);
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--clr-primary-cream);
+}
+
+.grid-flow {
+    display: grid;
+    gap: 1.2rem;
+}
+
+.product-preview {
+    display: grid;
+    margin: 2rem;
+}
+
+@media (min-width: 50rem) {
+    .product-preview {
+        grid-template-columns: 1fr 1fr;
+        max-width: 40rem;
+    }
+}
+
+.product-details {
+    padding: 1.5rem;
+    background-color: var(--clr-neutral-white);
+}
+
+.product-type {
+    letter-spacing: 0.3125rem;
+    text-transform: uppercase;
+}
+
+.product-type,
+.product-description,
+.original-price {
+    opacity: 0.6;
+}
+
+.product-name,
+.product-description {
+    line-height: 1.5;
+}
+
+.product-name {
+    font-weight: var(--fw-black);
+    font-size: var(--fs-750);
+}
+
+.product-description {
+    font-size: var(--fs-300);
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sale-price {
+    font-size: var(--fs-750);
+    color: var(--clr-primary-dark-cyan);
+    font-weight: var(--fw-black);
+}
+
+.original-price {
+    text-decoration: line-through;
+}
+
+.purchase-btn {
+    background-color: var(--clr-primary-dark-cyan);
+    color: var(--clr-neutral-white);
+    padding: 1rem 2rem;
+    border: 0;
+    border-radius: 0.5rem;
+    font-weight: var(--fw-black);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.purchase-btn:hover {
+    filter: brightness(95%);
+}
